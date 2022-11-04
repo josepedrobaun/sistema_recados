@@ -14,7 +14,7 @@ formHTML.addEventListener('submit', (e) => {
     }
 
     localStorage.setItem('usuarioLogado', usuarios.usuario)
-    window.location.assign('./home.html')
+    window.location.assign('./index.html')
 })
 
 //PROCURA SE EXISTE O USUÁRIO E CONFERE A SENHA

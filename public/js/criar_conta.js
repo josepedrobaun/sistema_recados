@@ -30,7 +30,7 @@ formHTML.addEventListener('submit', (e) => {
 
     alert('Conta criada com sucesso!')
     localStorage.setItem('usuarioLogado', `${usuarioHTML.value}`)
-    location.assign('./home.html')
+    location.assign('./index.html')
 })
 
 //SALVA O USUÁRIO NO LOCAL STORAGE
