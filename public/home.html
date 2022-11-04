@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Recados - Home</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <header class="container-fluid pt-2">
+        <div class="row cabecalho">
+            <div class="col-10 col-md-11">
+                <h2>Sistema de Recados</h2>
+            </div>
+            <div class="col-2 col-md-1 mt-2 cabecalho-sair">
+                <a href="./login.html"><span>Sair</span></a>
+            </div>
+        </div>
+    </header>
+    <main class="container d-flex flex-column align-items-center">
+        <div class="row entrada-dados">
+            <form class="col" id="form-recados" action="cadastrarRecado">
+                <input class="slide-top" id="novo-recado" type="button" value="Novo Recado">
+                <dialog class="mx-auto mt-4" id="pop-up">
+                    <input type="hidden" name="numero_recado" id="numero_recado">
+                    <input type="text" name="descricao" id="input-descricao" class="form-control" placeholder="Descrição">
+                    <input type="text" name="detalhamento" id="input-detalhamento" class="form-control mb-3 mt-1" placeholder="Detalhamento">
+                    <input type="button" id="botao-cancelar" value="Cancelar" class="btn btn-danger">
+                    <input id="botao-cadastrar" type="button" value="Cadastrar" class="btn btn-primary">
+                </dialog>
+            </form>
+        </div>
+        <div class="row informacoes">
+            <table class="col">
+                <thead>
+                    <tr id="cabecalho-tabela">
+                        <th class="col1">#</th>
+                        <th class="col2">Descrição</th>
+                        <th class="col3">Detalhamento</th>
+                        <th class="col4">Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="recados">
+                    <tr>
+                        <td>AindaSem Informações</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="./js/home.js"></script>
+</body>
+</html>
