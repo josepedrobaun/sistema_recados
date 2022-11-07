@@ -4,7 +4,7 @@ const descricaoHTML = document.querySelector('#input-descricao')
 const detalhamentoHTML = document.querySelector('#input-detalhamento')
 const recadosHTML = document.querySelector('#recados')
 const editarHTML = document.querySelector('#texto-editar')
-const sairSistemaHTML = document.querySelector('.cabecalho-sair span')
+const sairSistemaHTML = document.querySelector('.cabecalho-sair button')
 const numeroHTML = document.querySelector('#numero_recado')
 const modalHTML = document.querySelector('#pop-up')
 const usuarioLogado = JSON.parse(localStorage.getItem(localStorage.getItem('usuarioLogado')))
@@ -17,7 +17,7 @@ const btnNovoRecado = document.querySelector('#novo-recado')
 //LOAD DOM
 document.addEventListener('DOMContentLoaded', (()=>{
     if(!usuarioLogado){
-        location.assign('index.html')
+        location.assign('../index.html')
         return
     } 
     console.log(usuarioLogado)
@@ -170,6 +170,6 @@ function limparDados(){
 //LOGOUT DO SISTEMA 
 function sairSistema(){
     localStorage.removeItem('usuarioLogado')
-    location.assign('login.html')
+    location.assign('./public/login.html')
 }
 
